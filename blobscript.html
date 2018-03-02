@@ -1,0 +1,8 @@
+<html>
+<script type="text/javascript">
+	var blob = new Blob(["function getBlob(){alert('This blob inline alert')}"]);
+	var blobURL = window.URL.createObjectURL(blob);
+</script>
+
+<button onclick="getBlob()">Hit</button>
+</html>

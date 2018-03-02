@@ -1,0 +1,26 @@
+curl -X POST -H "Authorization: key=AAAALnU7LIc:APA91bF-sg9xRpxsThZVrDrCcH7M2BMz7WLRtFwf73g-68Tr2fJjaBCU65EiC-ostVuPnNZxhsiQ5REUXExtszJ0BT8uMLdBdgVkXG88b3wuHKeMklTQZ53mHb0OBooL3z4_lnMALA9O" -H "Content-Type: application/json" -d '{
+  "notification": {
+    "title": "This is only 4 test chrome",
+    "body": "Avadhesh test message1 asdf asjaskdsdjfkas dfjasdkf jasddjf jasfjkasdjfkasjdf jasdkfja sdfdjasdkf",
+    "icon": "firebase-logo.png",
+    "click_action": "http://localhost:8081"
+  },
+  "to": "dVDsy6Cvuw0:APA91bHhGIUqFzr69u19NzVexvBqXOnHxTrv71hnEr5eZfm88aLsulZCdlW1aFRUtlHqPfiTDO8USZFTlMYvVdFjw6dUd9z3eg5k74YdLJldiupXJkG_VAh28MUHZ7taF8NED1euMsZ-"
+}' "https://fcm.googleapis.com/fcm/send"
+
+
+
+
+
+curl -X POST -H "Authorization: key=AAAALnU7LIc:APA91bF-sg9xRpxsThZVrDrCcH7M2BMz7WLRtFwf73g-68Tr2fJjaBCU65EiC-ostVuPnNZxhsiQ5REUXExtszJ0BT8uMLdBdgVkXG88b3wuHKeMklTQZ53mHb0OBooL3z4_lnMALA9O" -H "Content-Type: application/json" -d '{
+  "notification": {
+    "title": "asfasdf testing",
+    "body": "asdjf jb  test message1 5656",
+    "icon": "firebase-logo.png",
+    "click_action": "http://localhost:8081"
+  },
+  "to": "cWyBtgyEjTI:APA91bGXAP5dn9jZM2kBuEmSJCW5-CC2SMObpZoXNUre0R_0iI9Ezdu3V-kUStDrwji02yvzw8cE8tfTRlwd9S3FrTlyOIEvSr32bEOJt6Bz5-GrJCQXZx2cV2DQtw0A_QHArAnpmity"
+}' "https://fcm.googleapis.com/fcm/send"
+
+
+Search term not being preserved in infinite scoll

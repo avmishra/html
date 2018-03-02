@@ -1,0 +1,47 @@
+<html>
+<head>
+    
+</head>
+
+<script>
+	// worker on the fly
+	var blob = new Blob(["self.addEventListener('message', function(e) { self.postMessage(e.data ); }, false); "]);
+	var blobURL = window.URL.createObjectURL(blob);
+
+	var worker1 = new Worker(blobURL);
+
+	var worker = new Worker('worker.js');
+
+      function inLineWorker() {
+	    worker1.postMessage("In line worker");
+	  }
+
+	  function sayHI() {
+	    worker.postMessage({'cmd': 'start', 'msg': 'Hi'});
+	  }
+
+	  function stop() {
+	    // worker.terminate() from this script would also stop the worker.
+	    worker.postMessage({'cmd': 'stop', 'msg': 'Bye'});
+	  }
+
+	  function unknownCmd() {
+	    worker.postMessage({'cmd': 'foobard', 'msg': '???'});
+	  }
+
+	  worker.addEventListener('message', function(e) {
+	    document.getElementById('result').textContent = e.data;
+	  }, false);
+
+	  worker1.addEventListener('message', function(e) {
+	    document.getElementById('result').textContent = e.data;
+	  }, false);
+
+</script>
+
+	<button onclick="inLineWorker()">Say HI By Inline workder</button>
+	<button onclick="sayHI()">Say HI</button>
+	<button onclick="unknownCmd()">Send unknown command</button>
+	<button onclick="stop()">Stop worker</button>
+	<output id="result"></output>
+</html>
