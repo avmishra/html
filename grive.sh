@@ -1,3 +1,3 @@
-cd /home/avadhesh/Documents/pepperfry
-sleep 6
+cd /home/avadhesh/Documents/grive
+sleep 60
 grive
