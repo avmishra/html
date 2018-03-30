@@ -1,2 +1,5 @@
 cd /var/www/html
-bash supervisorgit.sh
+git pull origin master
+git add .
+git commit -m 'commited by ubuntu sync'
+git push origin master
